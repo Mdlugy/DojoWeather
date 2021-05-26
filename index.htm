@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div id="navcontainer">
+            <div id="title">DojoWeather</div>
+            <div id="cityContainer">
+                <div id = 'City1' onclick="changeCity(this.id)" class="city">Burbank</div>
+                <div id = 'City2' onclick="changeCity(this.id)" class="city">Chicago</div>
+                <div id = 'City3' onclick="changeCity(this.id)" class="city">Dallas</div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <header>
+            <h1 id = "cityName">San Jose</h1>
+            <div class="temptypecontainer"><p>show temperature in </p>
+                <div id="dropdown">
+                    <button id = "currentTempType" class = "dropbtn">&deg;C</button>
+                    <div id="dropdown-content">
+                        <div id = "tempC" Onclick = "changeTemp(this.id)" class = tempType>&deg;C</div>
+                        <div id = "tempF" Onclick = "changeTemp(this.id)" class = tempType>&deg;F</div>
+                        <div id = "tempK" Onclick = "changeTemp(this.id)" class = tempType>&deg;K</div>
+                    </div>
+                </div>
+        </div>
+        </header>
+        <div id="container">
+            <div class="forecast">
+                <h1 class="day">Today</h1>
+                <div class="foreImg">
+                    <img src="./Img/some_rain.png" alt ="">
+                </div>
+                <div class="description"> some Rain</div>
+                <div class="tempcontainer">
+                    <div id = "todayHigh" class="high"></div>
+                    <div id = "todayLow" class="low"></div>
+                </div>
+            </div>
+            <div class="forecast">
+                <h1 class="day">Tomorrow</h1>
+                <div class="foreImg">
+                    <img src="./Img/some_sun.png" alt ="some sun">
+                </div>
+                <div class="description"> some sun</div>
+                <div class="tempcontainer">
+                    <div id = "tomorrowHigh" class="high"></div>
+                    <div id = "tomorrowLow" class="low"></div>
+                </div>
+            </div>
+            <div class="forecast">
+                <h1 class="day">Friday</h1>
+                <div class="foreImg">
+                    <img src="./Img/some_clouds.png" alt ="some clouds">
+                </div>
+                <div class="description">some clouds</div>
+                <div class="tempcontainer">
+                    <div id = "friHigh" class="high"></div>
+                    <div id = "friLow" class="low"></div>
+                </div>
+            </div>
+            <div class="forecast">
+                <h1 class="day">Saturday</h1>
+                <div class="foreImg">
+                    <img src="./Img/some_sun.png" alt ="some sun">
+                </div>
+                <div class="description">some sun</div>
+                <div class="tempcontainer">
+                    <div id = "satHigh" class="high"></div>
+                    <div id = "satLow" class="low">;</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="cookiepolicy">
+        <img src="./Img/cookie.png" alt ="cookie" id = "cookie">
+        <div id="cookietextcontainer">
+            <h1>Stop! Cookie time</h1>
+            <p>
+                We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyse our traffic <span onclick = "nsaMessage()" id="cookiespan">Read more...</span>
+            </p>
+        </div>
+        <button onclick="Acceptcookie(this.id)" id = "AcceptCookies">I Accept</button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
